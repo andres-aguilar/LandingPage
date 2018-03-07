@@ -17,7 +17,7 @@ gulp.task('sass', () => {
       'node_modules/bootstrap/scss/bootstrap.scss',
       'src/scss/*.scss'
     ])
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass()) //{outputStyle: 'compressed'}
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(browserSync.stream());
 });

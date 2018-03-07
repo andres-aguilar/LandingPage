@@ -1,1 +1,86 @@
 /* Custom styles */
+
+:root {
+  --dark-blue: #1e5799;
+  --ligth-blue: #2989d8;
+}
+
+$colors: (
+  yellow: #ecc000,
+  pink: #d40053,
+  green: #009966,
+  blue: #5297ce,
+  white: #fff,
+  black:#000
+);
+
+@each $name,$color in $colors {
+  .#{$name} {background-color: $color;}
+  .#{$name}-text {color: $color;}
+
+  .btn--#{$name} {
+    @extend .#{$name};
+    box-shadow: 3px 3px 0px 3px darken($color, 15);
+  }
+}
+
+.bold {font-weight: bold;}
+.inline-block {display: inline-block;}
+.pull-right {float: right;}
+.relative {position: relative;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.text-left {text-align: left;}
+.no-border {border: none;}
+.large-padding {padding: 10px 15px}
+.small {font-size: 14px;}
+.slim {font-weight: 200;}
+.title {font-size: 50px;}
+.top-space{margin-top: 1em;}
+.uppercase {text-transform: uppercase;}
+.white-text {color: #fff;}
+
+html, body {
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+}
+
+a {text-decoration: none;}
+
+header {
+  .init {
+    @extend .pull-right;
+    @extend .relative;
+    padding-right: 10px;
+    top: 2em;
+  }
+  .restant-time {
+    span{
+      @extend .inline-block;
+      vertical-align: top;
+      line-height: 1em;
+      font-size: 99px;
+      span {
+        display: block;
+        @extend .small;
+        @extend .uppercase;
+        @extend .bold;
+      }
+    }
+  }
+}
+.btn {
+  @extend .bold;
+  @extend .no-border;
+  @extend .large-padding;
+}
+.workshop-background {
+  background: var(--dark-blue);
+  background: -webkit-linear-gradient(var(--dark-blue) 0%, var(--dark-blue) 20%, #207cca 50%, #2989d8 79%, #7db9e8 100%);
+  background: -o-linear-gradient(var(--dark-blue) 0%, var(--dark-blue) 20%, #207cca 50%, #2989d8 79%, #7db9e8 100%);
+  background: linear-gradient(var(--dark-blue) 0%, var(--dark-blue) 20%, #207cca 50%, #2989d8 79%, #7db9e8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--dark-blue), endColorstr='#7db9e8',GradientType=0 );
+  padding-bottom: 100px;
+}

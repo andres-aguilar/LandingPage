@@ -9,21 +9,37 @@ html(lang="es")
     meta(name="description", content="Description here")
     meta(name="keywords", content="keywords,here")
     //- Styles
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
     link(rel="stylesheet", href="assets/css/main.css")
+    //- flexboxgrid
+    link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css", type="text/css")
+    //- Google Fonts
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:200,400,600i,700", rel="stylesheet")
     //- Font-awesome
     script(defer, src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
-    //- Icon
-    link(rel="shortcut icon", href="" type="image/vdn.microsoft.icon")
-    link(rel="icon", href="", sizes="16x16", type="image/png")
     //- Title
-    title Example
+    title LandingPage desde 0 de CF
   body
     <!--[if lte IE 9]>  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p> <![endif] -->
-    h1 Jade/Pug - HTML preprocessor engine
-
+    .workshop-background
+      .row.center-xs
+        .col-xs-10.col-sm-8.col-md-6
+          .box
+            header.white-text.text-center
+              .inline-block
+                img(src="assets/images/tl.png", alt="taller live", height=60)
+                .init Iniciamos en
+                .restant-time
+                  span 01
+                    span días
+                  span :
+                  span 00
+                    span horas
+                  span :
+                  span 60
+                    span minutos
+              h1.slim.title Creando un LandingPage desde cero con HTML y CSS
+              .top-space
+                a.btn.btn--yellow.black-text(href="#", target="_blank") Tomar taller
+    
     //- JS imports
-    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
     script(src="assets/js/main.js", charset="utf-8")
