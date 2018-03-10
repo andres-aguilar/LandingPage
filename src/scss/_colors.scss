@@ -1,0 +1,20 @@
+/* File colors */
+
+$colors: (
+  yellow: #ecc000,
+  pink: #d40053,
+  green: #009966,
+  blue: #5297ce,
+  white: #fff,
+  black:#000
+);
+
+@each $name,$color in $colors {
+  .#{$name} {background-color: $color;}
+  .#{$name}-text {color: $color;}
+
+  .btn--#{$name} {
+    @extend .#{$name};
+    box-shadow: 3px 3px 0px 3px darken($color, 15);
+  }
+}

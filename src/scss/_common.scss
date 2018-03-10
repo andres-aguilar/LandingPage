@@ -1,0 +1,24 @@
+/* File common */
+.absolute {position: absolute;}
+.bold {font-weight: bold;}
+.container-80 {width: 80%; margin: 0 auto;}
+.circle {border-radius: 50%;}
+.inline-block {display: inline-block;}
+.pull-right {float: right;}
+.relative {position: relative;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.text-left {text-align: left;}
+.no-border {border: none;}
+.no-padding {padding: 0px;}
+.large-padding {padding: 10px 15px;}
+.padding-50 {padding-top: 50px; padding-bottom: 50px;}
+.relative {position: relative;}
+.small {font-size: 14px;}
+.slim {font-weight: 200;}
+.title {font-size: 50px;}
+.top-space{margin-top: 1em;}
+.uppercase {text-transform: uppercase;}
+.white-text {color: #fff;}
+.z-depth {box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+.move-up {@extend .relative; top: -50px;}
