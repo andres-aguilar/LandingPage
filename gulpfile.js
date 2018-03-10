@@ -13,10 +13,7 @@ gulp.task('views', () => {
 
 /* Compile SASS */
 gulp.task('sass', () => {
-  return gulp.src([
-      'node_modules/bootstrap/scss/bootstrap.scss',
-      'src/scss/*.scss'
-    ])
+  return gulp.src(['src/scss/*.scss'])
     .pipe(sass()) //{outputStyle: 'compressed'}
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(browserSync.stream());
@@ -24,12 +21,7 @@ gulp.task('sass', () => {
 
 /* Watch changes on JavaScript files */
 gulp.task('js', () => {
-  return gulp.src([
-    'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/popper.js/dist/umd/popper.min.js',
-    'src/scripts/*.js'
-  ])
+  return gulp.src(['src/scripts/*.js'])
   .pipe(gulp.dest('dist/assets/js'))
   .pipe(browserSync.stream());
 });
